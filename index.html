@@ -704,6 +704,25 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
  main:not(.sj){padding-left:48px!important;padding-right:48px!important}
 }
 </style>
+<style>
+/* ===== sort bar + PDF loading animation ===== */
+.sortbar{display:flex;justify-content:flex-end;margin:14px 0 4px}
+.sortbar label{display:flex;align-items:center;gap:10px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.sortbar select{appearance:none;-webkit-appearance:none;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--tx);background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%23c9a24a' stroke-width='1.6'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--line);border-radius:6px;padding:8px 32px 8px 14px;cursor:pointer;transition:border-color .25s ease,color .25s ease}
+.sortbar select:hover,.sortbar select:focus-visible{border-color:var(--gold);outline:0}
+.sortbar select option{background:var(--card);color:var(--tx);text-transform:none;letter-spacing:0}
+.reader .rview{position:relative}
+.rload{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:color-mix(in srgb,var(--ink) 55%,#04090b);color:#eadfc8;transition:opacity .45s ease}
+.rload.done{opacity:0;pointer-events:none}
+.rl-quill{width:72px;height:72px;color:#f5c542;transform-origin:14% 95%;animation:rlWrite 1.8s ease-in-out infinite}
+.rl-quill .qs{width:100%;height:100%}
+.rl-t{font:italic 20px var(--serif);letter-spacing:.02em}
+.rl-bar{width:200px;height:3px;border-radius:3px;background:color-mix(in srgb,#f5c542 22%,transparent);overflow:hidden}
+.rl-bar i{display:block;height:100%;width:38%;border-radius:3px;background:#f5c542;animation:rlSlide 1.3s cubic-bezier(.4,0,.2,1) infinite;transition:width .3s ease}
+@keyframes rlWrite{0%,100%{transform:rotate(-3deg) translateX(-6px)}50%{transform:rotate(3deg) translateX(8px) translateY(-3px)}}
+@keyframes rlSlide{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
+@media(prefers-reduced-motion:reduce){.rl-quill,.rl-bar i{animation:none}}
+</style>
 </head>
 <body class="intro">
 <div id="bg"><u class="au"></u><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
@@ -794,11 +813,19 @@ function render(){
 }
 let vf=null;const lf={},FOLD='<svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>';
 const folders=()=>[...new Set([...items.filter(i=>i.subject===subj&&i.type==='video'&&i.grade===grade&&i.folder).map(i=>i.folder),...(lf[subj+grade]||[])])].sort();
-const pane=()=>{let list=items.filter(i=>i.subject===subj&&i.type===tab&&i.grade===grade).sort((a,b)=>b.createdAt-a.createdAt),head='';
+const SORTS=[['az','A → Z'],['za','Z → A'],['new','Newest first'],['old','Oldest first']];
+let srt=(()=>{try{const v=localStorage.getItem('noesis-sort');return SORTS.some(x=>x[0]===v)?v:'az'}catch(_){return'az'}})();
+const byT=(a,b)=>String(a).localeCompare(String(b),undefined,{numeric:true,sensitivity:'base'}),
+ cmp=()=>srt==='az'?(a,b)=>byT(a.title,b.title):srt==='za'?(a,b)=>byT(b.title,a.title):srt==='old'?(a,b)=>a.createdAt-b.createdAt:(a,b)=>b.createdAt-a.createdAt,
+ fdate=f=>Math.max(0,...items.filter(i=>i.type==='video'&&i.subject===subj&&i.grade===grade&&i.folder===f).map(i=>i.createdAt)),
+ fcmp=(a,b)=>srt==='az'?byT(a,b):srt==='za'?byT(b,a):srt==='old'?fdate(a)-fdate(b):fdate(b)-fdate(a),
+ setSort=v=>{srt=v;try{localStorage.setItem('noesis-sort',v)}catch(_){}paneSwap(0)};
+const pane=()=>{let list=items.filter(i=>i.subject===subj&&i.type===tab&&i.grade===grade).sort(cmp()),head='',nF=0;
   if(tab==='video'){const fs=folders();if(vf&&!fs.includes(vf))vf=null;
     if(vf){list=list.filter(i=>i.folder===vf);head=`<div class="crumb"><button class="open" onclick="setFolder(null,-1)"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All videos</button><b>${esc(vf)}</b></div>`}
-    else{list=list.filter(i=>!i.folder);head=fs.length?`<div class="list fl">${fs.map(f=>`<button class="row fo" data-f="${esc(f)}" onclick="setFolder(this.dataset.f,1)">${FOLD}<div class="t">${esc(f)}<div class="k">${items.filter(i=>i.type==='video'&&i.subject===subj&&i.grade===grade&&i.folder===f).length} videos</div></div></button>`).join('')}</div>`:''}}
-  return`${head}<div class="list">${list.map(row).join('')||(head&&!vf?'':`<span class="epic">${ART_('empty',150,190,11)}</span><div class="empty">${vf?'This folder is empty.':`Nothing in Grade ${grade} yet.`}</div>`)}</div>`};
+    else{list=list.filter(i=>!i.folder);nF=fs.length;head=fs.length?`<div class="list fl">${fs.slice().sort(fcmp).map(f=>`<button class="row fo" data-f="${esc(f)}" onclick="setFolder(this.dataset.f,1)">${FOLD}<div class="t">${esc(f)}<div class="k">${items.filter(i=>i.type==='video'&&i.subject===subj&&i.grade===grade&&i.folder===f).length} videos</div></div></button>`).join('')}</div>`:''}}
+  const bar=list.length+nF>1?`<div class="sortbar"><label>Sort<select aria-label="Sort order" onchange="setSort(this.value)">${SORTS.map(x=>`<option value="${x[0]}"${x[0]===srt?' selected':''}>${x[1]}</option>`).join('')}</select></label></div>`:'';
+  return`${bar}${head}<div class="list">${list.map(row).join('')||(head&&!vf?'':`<span class="epic">${ART_('empty',150,190,11)}</span><div class="empty">${vf?'This folder is empty.':`Nothing in Grade ${grade} yet.`}</div>`)}</div>`};
 const setFolder=(f,d)=>{vf=f;paneSwap(d)};
 function syncNav(now){const t=$('.tabs');if(!t)return;
   t.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===tab));
@@ -834,7 +861,7 @@ async function openReader(id){
   const COL=['#ffd54a','#7be08a','#ff8fb8','#6fc3ff','#ff5252','#222222'],ov=document.createElement('div');ov.className='reader';ov.dataset.tool='none';
   ov.innerHTML=`<div class="rbar"><button class="back" title="Back to site" aria-label="Back to site"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><b>${esc(i.title)}</b><button id="pv" title="Previous page" aria-label="Previous page"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><input id="pn" value="1" aria-label="Page number"><span id="pt"></span><button id="nx" title="Next page" aria-label="Next page"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button id="zo" title="Zoom out" aria-label="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button><span id="zl" style="min-width:44px;text-align:center"></span><button id="zi" title="Zoom in" aria-label="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><button id="fw" title="Fit width" aria-label="Fit width"><svg viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></button></div>
   <div class="rbar tools"><button data-t="none" class="on" title="Browse / select text" aria-label="Browse / select text"><svg viewBox="0 0 24 24"><path d="M6 3l13 8-6 2-2 6z"/></svg></button><button data-t="pen" title="Pen" aria-label="Pen"><svg viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg></button><button data-t="hl" title="Highlighter" aria-label="Highlighter"><svg viewBox="0 0 24 24"><path d="M15 4l5 5-9 9-5-5z"/><path d="M6 13l-2 6 6-1M13 20h8"/></svg></button><button data-t="erase" title="Eraser" aria-label="Eraser"><svg viewBox="0 0 24 24"><path d="M8 20h12M4.5 14.5l8-8a2 2 0 0 1 3 0l3 3a2 2 0 0 1 0 3L11 20H8l-3.5-3.5a2 2 0 0 1 0-2z"/></svg></button><span class="gap"></span><span class="sw">${COL.map((c,n)=>`<button data-c="${c}" class="${n?'':'on'}" style="background:${c}" aria-label="Color ${c}"></button>`).join('')}</span><span class="gap"></span><button id="un" title="Undo" aria-label="Undo"><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><button id="rv" title="Revert to saved" aria-label="Revert to saved"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg></button><button id="cl" title="Clear all" aria-label="Clear all"><svg viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button><span id="ns"></span><button id="sv" class="back" title="Save marks" aria-label="Save marks"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg></button></div>
-  <div class="rview"><div class="pages"></div></div>`;
+  <div class="rview"><div class="rload" role="status" aria-live="polite"><div class="rl-quill"></div><div class="rl-t">Opening PDF…</div><div class="rl-bar"><i></i></div></div><div class="pages"></div></div>`;
   document.body.append(ov);
   const q=s=>ov.querySelector(s),view=q('.rview'),box=q('.pages');
   const MK='noesis-marks:'+i.id,savedMarks=()=>{try{return JSON.parse(localStorage.getItem(MK)||'null')||i.notes||{}}catch(_){return i.notes||{}}};
@@ -843,7 +870,12 @@ async function openReader(id){
   const close=()=>{if(dirty&&!confirm('Close without saving your marks?'))return;io?.disconnect();slots.forEach(s=>s.task?.cancel());doc?.destroy();ov.remove();removeEventListener('keydown',onKey)};
   const onKey=e=>{if(e.target.tagName==='INPUT')return;if(e.key==='Escape')close();else if(e.key==='+'||e.key==='=')zoom(1.2);else if(e.key==='-')zoom(1/1.2)};
   addEventListener('keydown',onKey);q('.back').onclick=close;
-  try{doc=await pdfjsLib.getDocument('files/'+encodeURI(i.file)).promise}catch(e){close();return toast('Could not open this PDF.')}
+  q('.rl-quill').innerHTML=QUILL();
+  const hideLoad=()=>{const l=q('.rload');if(l&&!l.classList.contains('done')){l.classList.add('done');setTimeout(()=>l.remove(),500)}};
+  const lt=pdfjsLib.getDocument('files/'+encodeURI(i.file));
+  lt.onProgress=({loaded,total})=>{const b=q('.rl-bar i'),t=q('.rl-t');if(b&&total){b.style.animation='none';b.style.width=Math.min(100,loaded/total*100)+'%';t.textContent='Opening PDF… '+Math.round(Math.min(100,loaded/total*100))+'%'}};
+  try{doc=await lt.promise}catch(e){close();return toast('Could not open this PDF.')}
+  q('.rl-t').textContent='Preparing pages…';
   const pages=await Promise.all(Array.from({length:doc.numPages},(_,n)=>doc.getPage(n+1)));
   q('#pt').textContent='/ '+doc.numPages;
   // ---- marks
@@ -875,7 +907,7 @@ async function openReader(id){
     const vp=s.page.getViewport({scale}),r=devicePixelRatio||1,c=document.createElement('canvas');
     c.width=Math.floor(vp.width*r);c.height=Math.floor(vp.height*r);
     s.task=s.page.render({canvasContext:c.getContext('2d'),viewport:vp,transform:r!==1?[r,0,0,r,0,0]:null});
-    try{await s.task.promise;s.pc.replaceChildren(c)}catch(e){return}
+    try{await s.task.promise;s.pc.replaceChildren(c);hideLoad()}catch(e){return}
     try{s.tt?.cancel();const tc=await s.page.getTextContent();if(s.at!==scale)return;s.tl.replaceChildren();s.tt=pdfjsLib.renderTextLayer({textContentSource:tc,container:s.tl,viewport:vp,textDivs:[]});await s.tt.promise}catch(e){}}
   io=new IntersectionObserver(es=>es.forEach(e=>{const s=e.target._s;s.vis=e.isIntersecting;if(s.vis){paint(s);mkAnn(s)}else{s.task?.cancel();s.at=0;s.pc.replaceChildren();s.tl.replaceChildren();s.ann?.remove();s.ann=null}}),{root:view,rootMargin:'900px 0px'});
   function layout(){slots.forEach(s=>{const vp=s.page.getViewport({scale});s.div.style.width=vp.width+'px';s.div.style.height=vp.height+'px';s.at=0});
@@ -884,7 +916,7 @@ async function openReader(id){
     scale=Math.min(5,Math.max(.3,abs||scale*f));layout();view.scrollTop=ry*view.scrollHeight;view.scrollLeft=rx*view.scrollWidth-view.clientWidth/2}
   const fit=()=>zoom(0,(view.clientWidth-40)/pages[0].getViewport({scale:1}).width);
   pages.forEach((p,n)=>{const d=document.createElement('div');d.className='pg';d.innerHTML='<div class="pc"></div><div class="tl"></div>';const s={page:p,div:d,pc:d.firstChild,tl:d.lastChild,n,at:0,vis:false};d._s=s;slots.push(s);box.append(d);io.observe(d)});
-  fit();
+  fit();setTimeout(hideLoad,6000);
   const go=n=>{n=Math.min(doc.numPages,Math.max(1,n));view.scrollTo({top:slots[n-1].div.offsetTop-12,behavior:'smooth'})};
   q('#pv').onclick=()=>go(cur-1);q('#nx').onclick=()=>go(cur+1);q('#pn').onchange=e=>go(parseInt(e.target.value)||cur);
   q('#zi').onclick=()=>zoom(1.2);q('#zo').onclick=()=>zoom(1/1.2);q('#fw').onclick=fit;
