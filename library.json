@@ -787,7 +787,7 @@
    }
   ],
   "src": "quizzes/Biology/9/reproduction-quiz.json",
-  "file": "Biology/9/2__Reproduction.pdf",
+  "file": "Biology/9/2. Reproduction.pdf",
   "id": "q1229612731",
   "createdAt": 1794370416280
  },
@@ -808,5 +808,113 @@
   "title": "3. Nervous System",
   "file": "Biology/9/3. Nervous System.pdf",
   "createdAt": 1794396203992
+ },
+ {
+  "id": "p2366674595",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 9,
+  "title": "1. Pancasila sebagai Landasan Berbangsa dan Bernegara",
+  "file": "Pancasila/9/1. Pancasila sebagai Landasan Berbangsa dan Bernegara.pdf",
+  "createdAt": 1794417926313
+ },
+ {
+  "id": "p3033076539",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 9,
+  "title": "2. Hak dan Kewajiban Warga Negara",
+  "file": "Pancasila/9/2. Hak dan Kewajiban Warga Negara.pdf",
+  "createdAt": 1794417926314
+ },
+ {
+  "id": "p3473183981",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 9,
+  "title": "3. Kebebasan Berpendapat di Era Keterbukaan Informasi",
+  "file": "Pancasila/9/3. Kebebasan Berpendapat di Era Keterbukaan Informasi.pdf",
+  "createdAt": 1794417926315
+ },
+ {
+  "id": "p4251814449",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 9,
+  "title": "4. Pelestarian Tradisi, Budaya, dan Kearifan Lokal dalam Masyarakat Global",
+  "file": "Pancasila/9/4. Pelestarian Tradisi, Budaya, dan Kearifan Lokal dalam Masyarakat Global.pdf",
+  "createdAt": 1794417926316
+ },
+ {
+  "id": "p0233350522",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 9,
+  "title": "5. Menjaga Keutuhan Wilayah Negara Kesatuan Republik Indonesia",
+  "file": "Pancasila/9/5. Menjaga Keutuhan Wilayah Negara Kesatuan Republik Indonesia.pdf",
+  "createdAt": 1794417926317
+ },
+ {
+  "id": "p4133985261",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 7,
+  "title": "1. Sejarah Kelahiran Pancasila",
+  "file": "Pancasila/7/1. Sejarah Kelahiran Pancasila.pdf",
+  "createdAt": 1794417926318
+ },
+ {
+  "id": "p4290001523",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 7,
+  "title": "2. Penerapan Nilai-Nilai Pancasila",
+  "file": "Pancasila/7/2. Penerapan Nilai-Nilai Pancasila.pdf",
+  "createdAt": 1794417926319
+ },
+ {
+  "id": "p0820245475",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 7,
+  "title": "3. Patuh Terhadap Norma",
+  "file": "Pancasila/7/3. Patuh Terhadap Norma.pdf",
+  "createdAt": 1794417926320
+ },
+ {
+  "id": "p1541742200",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 7,
+  "title": "4. Keberagaman Bangsa Indonesia dalam Bingkai Bhinneka Tunggal Ika",
+  "file": "Pancasila/7/4. Keberagaman Bangsa Indonesia dalam Bingkai Bhinneka Tunggal Ika.pdf",
+  "createdAt": 1794417926321
+ },
+ {
+  "id": "p3824468367",
+  "type": "pdf",
+  "subject": "Pancasila",
+  "grade": 7,
+  "title": "5. Wilayah Negara Kesatuan Republik Indonesia",
+  "file": "Pancasila/7/5. Wilayah Negara Kesatuan Republik Indonesia.pdf",
+  "createdAt": 1794417926322
+ },
+ {
+  "id": "p2630849427",
+  "type": "pdf",
+  "subject": "Biology",
+  "grade": 7,
+  "title": "4. Classifications",
+  "file": "Biology/7/4. Classifications.pdf",
+  "createdAt": 1794417926323
+ },
+ {
+  "id": "p2427495449",
+  "type": "pdf",
+  "subject": "Biology",
+  "grade": 7,
+  "title": "5. Ecosystem",
+  "file": "Biology/7/5. Ecosystem.pdf",
+  "createdAt": 1794417926324
  }
 ]

@@ -759,8 +759,8 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
 <main id="main"></main>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-const SUBJ=['Mathematics','Physics','Biology','Social Studies','Indonesian','English','Deutsch','Sundanese','Religion','Ethics'];
-{const L={Indonesia:'Indonesian',Sunda:'Sundanese'},l=localStorage.getItem('last');if(L[l])localStorage.setItem('last',L[l])}
+const SUBJ=['Mathematics','Physics','Biology','Social Studies','Indonesian','English','Deutsch','Sundanese','Religion','Pancasila'];
+{const L={Indonesia:'Indonesian',Sunda:'Sundanese',Ethics:'Pancasila'},l=localStorage.getItem('last');if(L[l])localStorage.setItem('last',L[l])}
 const TABS=[['pdf','Files'],['quiz','Practice Questionnaires'],['video','Video Bank']];
 let items=[],subj=null,tab='pdf',grade=7,swapId=0;
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -783,7 +783,7 @@ const ICON={
 Biology:sc('<g class="sway"><path class="st" pathLength="1" d="M32 62C32 50 31 40 32 26"/><path class="lf l1" d="M32 50C21 50 14 44 13 34c11 0 18 6 19 16z"/><path class="lf l2" d="M32 40c11 0 17-6 18-15-10 0-17 6-18 15z"/><path class="lf bd" d="M32 26c-8-4-8-14 0-20 8 6 8 16 0 20z"/></g>','i-bio'),
 Deutsch:sc('<path d="M32 62C24 57 14 56 4 58V26c10-2 20-1 28 4z"/><path d="M32 30v32M10 36q8-1 16 2M10 44q8-1 16 2"/><path d="M32 62c8-5 18-6 28-4V26c-10-2-20-1-28 4z"/><path class="pg" fill="currentColor" fill-opacity=".18" d="M32 62c8-5 18-6 28-4V26c-10-2-20-1-28 4z"/><g class="um"><path d="M24 10v7M40 10v7" stroke-width="3.6"/></g>','i-de'),
 English:sc('<path class="b1" d="M6 4h32a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H22l-8 7v-7H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z"/><path class="tl" pathLength="1" d="M9 11h24M9 18h15"/><path class="b2" d="M28 32h30a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4h-4l-1 8-9-8H28a4 4 0 0 1-4-4V36a4 4 0 0 1 4-4z"/><path class="tl t2" pathLength="1" d="M31 40h22M31 47h13"/>','i-en'),
-Ethics:sc('<path d="M32 62V17M21 62h22"/><path d="M32 7l3.5 4.5L32 16l-3.5-4.5z" fill="currentColor"/><g class="bm"><path d="M10 17h44"/><g class="pl"><path d="M10 17l-7 15M10 17l7 15M2 32h16a8 5 0 0 1-16 0z"/></g><g class="pr"><path d="M54 17l-7 15M54 17l7 15M46 32h16a8 5 0 0 1-16 0z"/></g></g>','i-et'),
+Pancasila:sc('<path d="M32 62V17M21 62h22"/><path d="M32 7l3.5 4.5L32 16l-3.5-4.5z" fill="currentColor"/><g class="bm"><path d="M10 17h44"/><g class="pl"><path d="M10 17l-7 15M10 17l7 15M2 32h16a8 5 0 0 1-16 0z"/></g><g class="pr"><path d="M54 17l-7 15M54 17l7 15M46 32h16a8 5 0 0 1-16 0z"/></g></g>','i-et'),
 Indonesian:sc('<path d="M2 46L10 32H54L62 46L54 60H10Z"/><path class="ln l1" pathLength="1" d="M14 40h36"/><path class="ln l2" pathLength="1" d="M14 46h36"/><path class="ln l3" pathLength="1" d="M14 52h24"/><g class="pn"><path d="M40 4L30 30"/><path d="M30 30l-1.2 5.5 4.2-3.2z" fill="currentColor"/></g>','i-id'),
 Mathematics:sc('<path d="M4 62q9-52 18 0q9-52 18 0q9-52 18 0" opacity=".45"/><g class="bx"><path class="by" d="M4 53.5l4 4-4 4-4-4z" fill="currentColor" stroke="none"/></g>','i-ma'),
 Physics:sc('<path d="M8 6h48"/><g class="pd" style="animation-delay:.16s;opacity:.28"><path d="M32 6v38"/><path d="M32 44l6 8-6 10-6-10z"/></g><g class="pd"><path d="M32 6v38"/><path d="M32 44l6 8-6 10-6-10z" fill="currentColor" fill-opacity=".3"/></g>','i-ph'),
@@ -1058,7 +1058,7 @@ const ART={hero:['The School of Athens Raphael Stanza della Segnatura','The Scho
 Biology:['The Heart of the Andes Frederic Edwin Church','The Heart of the Andes — Frederic Edwin Church, 1859','center 55%'],
 Deutsch:['File:Large Blue Horses.jpg','The Large Blue Horses — Franz Marc, 1911','center 55%','Franz Marc Large Blue Horses Walker Art Center'],
 English:['The Hay Wain John Constable','The Hay Wain — John Constable, 1821','center 55%'],
-Ethics:['Effects of Good Government in the City Ambrogio Lorenzetti','Effects of Good Government — Ambrogio Lorenzetti, 1339','center 50%'],
+Pancasila:['Effects of Good Government in the City Ambrogio Lorenzetti','Effects of Good Government — Ambrogio Lorenzetti, 1339','center 50%'],
 Indonesian:['Arrest of Prince Diponegoro Raden Saleh','The Arrest of Prince Diponegoro — Raden Saleh, 1857','center 55%'],
 Mathematics:['The Ideal City Urbino Galleria Nazionale delle Marche','The Ideal City — attributed to Piero della Francesca, c. 1480','center 50%'],
 Physics:['The Starry Night Vincent van Gogh','The Starry Night — Vincent van Gogh, 1889','center 42%'],
@@ -1075,7 +1075,7 @@ const MARGIN={
 Biology:[['Niagara Frederic Edwin Church','Niagara — F. E. Church, 1857'],['Cotopaxi Frederic Edwin Church','Cotopaxi — F. E. Church, 1862'],['Great Piece of Turf Albrecht Durer','The Great Piece of Turf — Dürer, 1503'],['Still Life with Flowers Ambrosius Bosschaert','Flower Still Life — Bosschaert, c. 1620']],
 Deutsch:[['File:Kirchner 1913 Street, Berlin.jpg|File:Kirchner Berlin Street Scene 1913.jpg','Street, Berlin — E. L. Kirchner, 1913','Kirchner Street Berlin 1913'],['File:Blue Mountain by Vasily Kandinsky, 1908-09.JPG','The Blue Mountain — Kandinsky, 1908–09','Kandinsky Blue Mountain Guggenheim'],['File:Marc-blue-black fox.jpg|File:Franz Marc Blaues Pferd 1911.jpg','Blue-Black Fox — Franz Marc, 1911','Franz Marc blue black fox'],['File:Kirchner - Straße am Stadtpark Schöneberg.jpg','Street at Schöneberg Park — Kirchner, 1912','Kirchner Stadtpark Schoneberg']],
 English:[['Salisbury Cathedral from the Meadows Constable','Salisbury Cathedral — Constable, 1831'],['Flatford Mill Constable','Flatford Mill — Constable, 1817'],['The Fighting Temeraire Turner','The Fighting Temeraire — Turner, 1839'],['Rain Steam and Speed Turner','Rain, Steam and Speed — Turner, 1844']],
-Ethics:[['Allegory of Bad Government Lorenzetti','Effects of Bad Government — Lorenzetti, 1339'],['Death of Socrates Jacques-Louis David','The Death of Socrates — David, 1787'],['Allegory of Good Government Lorenzetti','Allegory of Good Government — Lorenzetti, 1339'],['Judgment of Solomon Nicolas Poussin','The Judgement of Solomon — Poussin, 1649']],
+Pancasila:[['Allegory of Bad Government Lorenzetti','Effects of Bad Government — Lorenzetti, 1339'],['Death of Socrates Jacques-Louis David','The Death of Socrates — David, 1787'],['Allegory of Good Government Lorenzetti','Allegory of Good Government — Lorenzetti, 1339'],['Judgment of Solomon Nicolas Poussin','The Judgement of Solomon — Poussin, 1649']],
 Indonesian:[['Raden Saleh Fight Between a Lion and a Buffalo','Lion and Buffalo — Raden Saleh'],['Raden Saleh Boschbrand Forest Fire','Forest Fire — Raden Saleh, 1849'],['Raden Saleh Flood in Java','Flood in Java — Raden Saleh, 1862'],['Raden Saleh Shipwreck Storm','Storm at Sea — Raden Saleh, 1839']],
 Mathematics:[['Melencolia I Albrecht Durer','Melencolia I — Dürer, 1514'],['Archimedes Thoughtful Domenico Fetti','Archimedes — Domenico Fetti, 1620'],['Vitruvian Man Leonardo da Vinci','Vitruvian Man — Leonardo, c. 1490'],['Euclid Joos van Wassenhove','Euclid — Justus of Ghent, c. 1475']],
 Physics:[['Philosopher Lecturing on the Orrery Wright of Derby','A Philosopher Lecturing on the Orrery — Wright, 1766'],['Alchemist Discovering Phosphorus Wright of Derby','The Alchemist — Wright of Derby, 1771'],['Iron Forge Viewed from Without Wright of Derby','An Iron Forge — Wright of Derby, 1773'],['Newton William Blake 1795','Newton — William Blake, 1795']],
