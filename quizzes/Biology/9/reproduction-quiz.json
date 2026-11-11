@@ -1,0 +1,344 @@
+{
+ "title": "Reproduction: Cells to Pregnancy",
+ "file": "Biology/9/2__Reproduction.pdf",
+ "questions": [
+  {
+   "text": "How many chromosomes does a normal human body (somatic) cell have?",
+   "options": [
+    "48",
+    "23",
+    "46 (23 pairs)",
+    "92"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "After interphase, a human cell has copied its DNA. How many chromosomes and sister chromatids does it have?",
+   "options": [
+    "92 chromosomes and 92 chromatids",
+    "46 chromosomes and 46 chromatids",
+    "23 chromosomes and 46 chromatids",
+    "46 chromosomes and 92 sister chromatids"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "What does the Centromere Rule say you should count to find the number of chromosomes?",
+   "options": [
+    "The chromatids",
+    "The centromeres",
+    "The nuclei",
+    "The spindle fibers"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which protein forms the Z-ring at the middle of a dividing bacterium?",
+   "options": [
+    "Hemoglobin",
+    "Myosin",
+    "FtsZ",
+    "Actin"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What is the septum in bacterial binary fission?",
+   "options": [
+    "The origin of replication",
+    "A new cell wall that grows inward along the Z-ring",
+    "The circular chromosome",
+    "A bundle of spindle fibers"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which of these is an example of budding?",
+   "options": [
+    "A California blackworm regrowing from a piece",
+    "A bacterium splitting at the septum",
+    "Yeast growing a small bump that later breaks off",
+    "A potato eye growing a new stalk"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What is mitosis used for in the human body?",
+   "options": [
+    "Making sperm and eggs",
+    "Creating new gene combinations",
+    "Halving the chromosome number",
+    "Growth, replacing worn-out cells and healing damaged tissue"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "What does one round of mitosis produce from a single diploid cell?",
+   "options": [
+    "4 identical diploid cells",
+    "2 genetically identical diploid cells",
+    "2 genetically unique haploid cells",
+    "4 genetically unique haploid cells"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "What happens during anaphase of mitosis?",
+   "options": [
+    "Chromosomes line up single-file at the center",
+    "The nuclear envelope dissolves",
+    "Sister chromatids are pulled to opposite sides of the cell",
+    "Two new nuclear envelopes form"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "Which is the correct order of the mitosis stages after interphase?",
+   "options": [
+    "Prophase, Anaphase, Metaphase, Telophase",
+    "Prophase, Metaphase, Telophase, Anaphase",
+    "Metaphase, Prophase, Anaphase, Telophase",
+    "Prophase, Metaphase, Anaphase, Telophase"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Crossing over (swapping genetic pieces between homologous chromosomes) happens in which stage?",
+   "options": [
+    "Telophase I",
+    "Prophase I",
+    "Metaphase II",
+    "Anaphase II"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "How do chromosomes line up in Metaphase I of meiosis?",
+   "options": [
+    "They do not line up until Meiosis II",
+    "In a single-file line",
+    "Scattered randomly around the nucleus",
+    "In double-file homologous pairs"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "What separates in Anaphase I of meiosis?",
+   "options": [
+    "The two daughter cells",
+    "Nothing separates until Meiosis II",
+    "Homologous chromosome pairs, while sister chromatids stay attached",
+    "Sister chromatids, while homologous pairs stay together"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "How many chromatids does each human cell contain after Meiosis II?",
+   "options": [
+    "46",
+    "2",
+    "23",
+    "92"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "Which statement about genetic variation is correct?",
+   "options": [
+    "Mitosis creates more variation than meiosis",
+    "Only binary fission creates variation",
+    "Neither mitosis nor meiosis changes genetic makeup",
+    "Meiosis creates variation through crossing over and independent assortment, while mitosis makes exact copies"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "How many mature ova does one primary oocyte produce in oogenesis?",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "When does a secondary oocyte finish Meiosis II?",
+   "options": [
+    "Only if a sperm fertilizes it",
+    "Before birth",
+    "At ovulation",
+    "At puberty"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Which part of a sperm cell contains enzymes that help it penetrate the egg?",
+   "options": [
+    "The nucleolus",
+    "The acrosome cap",
+    "The flagellum",
+    "The middle piece"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Where does spermatogenesis take place?",
+   "options": [
+    "Vas deferens",
+    "Seminiferous tubules in the testes",
+    "Prostate gland",
+    "Epididymis"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Why are the testes kept in the scrotum?",
+   "options": [
+    "To help the penis fill with blood",
+    "To keep them warmer than the rest of the body",
+    "To store urine before excretion",
+    "To stay about 2 to 3 °C below core body temperature"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which gland secretes an alkaline, fructose-rich fluid that makes up about 60% of semen?",
+   "options": [
+    "Seminal vesicle",
+    "Bulbourethral gland",
+    "Prostate gland",
+    "Epididymis"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Where does fertilization normally occur?",
+   "options": [
+    "Uterus",
+    "Fallopian tube",
+    "Vagina",
+    "Cervix"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which layer of the uterine wall thickens each month and is shed during menstruation?",
+   "options": [
+    "Cervical canal",
+    "Myometrium",
+    "Perimetrium",
+    "Endometrium"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which hormone surge near Day 14 makes the mature follicle rupture and release the egg?",
+   "options": [
+    "Progesterone",
+    "LH (luteinizing hormone)",
+    "hCG",
+    "FSH"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "After ovulation the ruptured follicle becomes the corpus luteum. What does it secrete in large amounts?",
+   "options": [
+    "GnRH",
+    "Progesterone",
+    "FSH",
+    "Testosterone"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "What happens to the endometrium if fertilization does not occur?",
+   "options": [
+    "It turns into the corpus luteum",
+    "It keeps thickening",
+    "It becomes the placenta",
+    "Progesterone drops and the lining is shed"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which hormone do trophoblast cells secrete to keep the corpus luteum making progesterone?",
+   "options": [
+    "hCG",
+    "LH",
+    "Estrogen",
+    "FSH"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Which part of the blastocyst becomes the embryo, and which part forms the placenta?",
+   "options": [
+    "Inner cell mass becomes the embryo; trophoblast forms the placenta",
+    "Trophoblast becomes the embryo; inner cell mass forms the placenta",
+    "Morula becomes the embryo; zygote forms the placenta",
+    "Both parts become the placenta"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Which germ layer forms the nervous system, brain and skin?",
+   "options": [
+    "Endoderm",
+    "Mesoderm",
+    "Trophoblast",
+    "Ectoderm"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "What is the main driver of cervical cancer, and which tests help detect it early?",
+   "options": [
+    "HIV; PSA blood testing",
+    "High-risk HPV; Pap smears and HPV DNA testing",
+    "HPV; digital rectal examination",
+    "Epstein-Barr virus; Pap smears"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "What is endometriosis?",
+   "options": [
+    "Inflammation of the prostate",
+    "Cancer of the cervical epithelium",
+    "Absence of menstruation for more than 3 months",
+    "Endometrial-like tissue growing outside the uterine cavity"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which term means abnormally heavy or prolonged menstrual bleeding?",
+   "options": [
+    "Menorrhagia",
+    "Oligomenorrhea",
+    "Amenorrhea",
+    "Hypomenorrhea"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "What is the role of surfactant, made by Type II alveolar cells in the third trimester?",
+   "options": [
+    "It forms the baby's bones",
+    "It nourishes the fetus through the placenta",
+    "It prevents the lungs from collapsing at birth",
+    "It triggers labor contractions"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "Give two differences between mitosis and meiosis.",
+   "answer": "Mitosis has 1 division and makes 2 genetically identical diploid (2n = 46) cells for growth and repair. Meiosis has 2 divisions and makes 4 genetically unique haploid (n = 23) gametes, with variation from crossing over (Prophase I) and independent assortment (Metaphase I)."
+  },
+  {
+   "text": "Describe the hormone events that lead to ovulation around Day 14 of the menstrual cycle.",
+   "answer": "The hypothalamus releases GnRH, so the anterior pituitary releases FSH and LH. FSH makes follicles mature and secrete rising estrogen. Near Day 14 high estrogen triggers an LH surge, which makes the dominant follicle rupture and release the egg."
+  }
+ ]
+}

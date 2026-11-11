@@ -1,0 +1,794 @@
+[
+ {
+  "id": "p2911928149",
+  "type": "pdf",
+  "subject": "Biology",
+  "grade": 9,
+  "title": "2. Reproduction",
+  "file": "Biology/9/2. Reproduction.pdf",
+  "createdAt": 1794370416279
+ },
+ {
+  "type": "quiz",
+  "subject": "Biology",
+  "grade": 9,
+  "title": "Reproduction: Cells to Pregnancy",
+  "quiz": [
+   {
+    "n": 1,
+    "text": "How many chromosomes does a normal human body (somatic) cell have?",
+    "options": [
+     {
+      "label": "A",
+      "text": "48"
+     },
+     {
+      "label": "B",
+      "text": "23"
+     },
+     {
+      "label": "C",
+      "text": "46 (23 pairs)"
+     },
+     {
+      "label": "D",
+      "text": "92"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 2,
+    "text": "After interphase, a human cell has copied its DNA. How many chromosomes and sister chromatids does it have?",
+    "options": [
+     {
+      "label": "A",
+      "text": "92 chromosomes and 92 chromatids"
+     },
+     {
+      "label": "B",
+      "text": "46 chromosomes and 46 chromatids"
+     },
+     {
+      "label": "C",
+      "text": "23 chromosomes and 46 chromatids"
+     },
+     {
+      "label": "D",
+      "text": "46 chromosomes and 92 sister chromatids"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 3,
+    "text": "What does the Centromere Rule say you should count to find the number of chromosomes?",
+    "options": [
+     {
+      "label": "A",
+      "text": "The chromatids"
+     },
+     {
+      "label": "B",
+      "text": "The centromeres"
+     },
+     {
+      "label": "C",
+      "text": "The nuclei"
+     },
+     {
+      "label": "D",
+      "text": "The spindle fibers"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 4,
+    "text": "Which protein forms the Z-ring at the middle of a dividing bacterium?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Hemoglobin"
+     },
+     {
+      "label": "B",
+      "text": "Myosin"
+     },
+     {
+      "label": "C",
+      "text": "FtsZ"
+     },
+     {
+      "label": "D",
+      "text": "Actin"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 5,
+    "text": "What is the septum in bacterial binary fission?",
+    "options": [
+     {
+      "label": "A",
+      "text": "The origin of replication"
+     },
+     {
+      "label": "B",
+      "text": "A new cell wall that grows inward along the Z-ring"
+     },
+     {
+      "label": "C",
+      "text": "The circular chromosome"
+     },
+     {
+      "label": "D",
+      "text": "A bundle of spindle fibers"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 6,
+    "text": "Which of these is an example of budding?",
+    "options": [
+     {
+      "label": "A",
+      "text": "A California blackworm regrowing from a piece"
+     },
+     {
+      "label": "B",
+      "text": "A bacterium splitting at the septum"
+     },
+     {
+      "label": "C",
+      "text": "Yeast growing a small bump that later breaks off"
+     },
+     {
+      "label": "D",
+      "text": "A potato eye growing a new stalk"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 7,
+    "text": "What is mitosis used for in the human body?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Making sperm and eggs"
+     },
+     {
+      "label": "B",
+      "text": "Creating new gene combinations"
+     },
+     {
+      "label": "C",
+      "text": "Halving the chromosome number"
+     },
+     {
+      "label": "D",
+      "text": "Growth, replacing worn-out cells and healing damaged tissue"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 8,
+    "text": "What does one round of mitosis produce from a single diploid cell?",
+    "options": [
+     {
+      "label": "A",
+      "text": "4 identical diploid cells"
+     },
+     {
+      "label": "B",
+      "text": "2 genetically identical diploid cells"
+     },
+     {
+      "label": "C",
+      "text": "2 genetically unique haploid cells"
+     },
+     {
+      "label": "D",
+      "text": "4 genetically unique haploid cells"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 9,
+    "text": "What happens during anaphase of mitosis?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Chromosomes line up single-file at the center"
+     },
+     {
+      "label": "B",
+      "text": "The nuclear envelope dissolves"
+     },
+     {
+      "label": "C",
+      "text": "Sister chromatids are pulled to opposite sides of the cell"
+     },
+     {
+      "label": "D",
+      "text": "Two new nuclear envelopes form"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 10,
+    "text": "Which is the correct order of the mitosis stages after interphase?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Prophase, Anaphase, Metaphase, Telophase"
+     },
+     {
+      "label": "B",
+      "text": "Prophase, Metaphase, Telophase, Anaphase"
+     },
+     {
+      "label": "C",
+      "text": "Metaphase, Prophase, Anaphase, Telophase"
+     },
+     {
+      "label": "D",
+      "text": "Prophase, Metaphase, Anaphase, Telophase"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 11,
+    "text": "Crossing over (swapping genetic pieces between homologous chromosomes) happens in which stage?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Telophase I"
+     },
+     {
+      "label": "B",
+      "text": "Prophase I"
+     },
+     {
+      "label": "C",
+      "text": "Metaphase II"
+     },
+     {
+      "label": "D",
+      "text": "Anaphase II"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 12,
+    "text": "How do chromosomes line up in Metaphase I of meiosis?",
+    "options": [
+     {
+      "label": "A",
+      "text": "They do not line up until Meiosis II"
+     },
+     {
+      "label": "B",
+      "text": "In a single-file line"
+     },
+     {
+      "label": "C",
+      "text": "Scattered randomly around the nucleus"
+     },
+     {
+      "label": "D",
+      "text": "In double-file homologous pairs"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 13,
+    "text": "What separates in Anaphase I of meiosis?",
+    "options": [
+     {
+      "label": "A",
+      "text": "The two daughter cells"
+     },
+     {
+      "label": "B",
+      "text": "Nothing separates until Meiosis II"
+     },
+     {
+      "label": "C",
+      "text": "Homologous chromosome pairs, while sister chromatids stay attached"
+     },
+     {
+      "label": "D",
+      "text": "Sister chromatids, while homologous pairs stay together"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 14,
+    "text": "How many chromatids does each human cell contain after Meiosis II?",
+    "options": [
+     {
+      "label": "A",
+      "text": "46"
+     },
+     {
+      "label": "B",
+      "text": "2"
+     },
+     {
+      "label": "C",
+      "text": "23"
+     },
+     {
+      "label": "D",
+      "text": "92"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 15,
+    "text": "Which statement about genetic variation is correct?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Mitosis creates more variation than meiosis"
+     },
+     {
+      "label": "B",
+      "text": "Only binary fission creates variation"
+     },
+     {
+      "label": "C",
+      "text": "Neither mitosis nor meiosis changes genetic makeup"
+     },
+     {
+      "label": "D",
+      "text": "Meiosis creates variation through crossing over and independent assortment, while mitosis makes exact copies"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 16,
+    "text": "How many mature ova does one primary oocyte produce in oogenesis?",
+    "options": [
+     {
+      "label": "A",
+      "text": "1"
+     },
+     {
+      "label": "B",
+      "text": "2"
+     },
+     {
+      "label": "C",
+      "text": "3"
+     },
+     {
+      "label": "D",
+      "text": "4"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 17,
+    "text": "When does a secondary oocyte finish Meiosis II?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Only if a sperm fertilizes it"
+     },
+     {
+      "label": "B",
+      "text": "Before birth"
+     },
+     {
+      "label": "C",
+      "text": "At ovulation"
+     },
+     {
+      "label": "D",
+      "text": "At puberty"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 18,
+    "text": "Which part of a sperm cell contains enzymes that help it penetrate the egg?",
+    "options": [
+     {
+      "label": "A",
+      "text": "The nucleolus"
+     },
+     {
+      "label": "B",
+      "text": "The acrosome cap"
+     },
+     {
+      "label": "C",
+      "text": "The flagellum"
+     },
+     {
+      "label": "D",
+      "text": "The middle piece"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 19,
+    "text": "Where does spermatogenesis take place?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Vas deferens"
+     },
+     {
+      "label": "B",
+      "text": "Seminiferous tubules in the testes"
+     },
+     {
+      "label": "C",
+      "text": "Prostate gland"
+     },
+     {
+      "label": "D",
+      "text": "Epididymis"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 20,
+    "text": "Why are the testes kept in the scrotum?",
+    "options": [
+     {
+      "label": "A",
+      "text": "To help the penis fill with blood"
+     },
+     {
+      "label": "B",
+      "text": "To keep them warmer than the rest of the body"
+     },
+     {
+      "label": "C",
+      "text": "To store urine before excretion"
+     },
+     {
+      "label": "D",
+      "text": "To stay about 2 to 3 °C below core body temperature"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 21,
+    "text": "Which gland secretes an alkaline, fructose-rich fluid that makes up about 60% of semen?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Seminal vesicle"
+     },
+     {
+      "label": "B",
+      "text": "Bulbourethral gland"
+     },
+     {
+      "label": "C",
+      "text": "Prostate gland"
+     },
+     {
+      "label": "D",
+      "text": "Epididymis"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 22,
+    "text": "Where does fertilization normally occur?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Uterus"
+     },
+     {
+      "label": "B",
+      "text": "Fallopian tube"
+     },
+     {
+      "label": "C",
+      "text": "Vagina"
+     },
+     {
+      "label": "D",
+      "text": "Cervix"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 23,
+    "text": "Which layer of the uterine wall thickens each month and is shed during menstruation?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Cervical canal"
+     },
+     {
+      "label": "B",
+      "text": "Myometrium"
+     },
+     {
+      "label": "C",
+      "text": "Perimetrium"
+     },
+     {
+      "label": "D",
+      "text": "Endometrium"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 24,
+    "text": "Which hormone surge near Day 14 makes the mature follicle rupture and release the egg?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Progesterone"
+     },
+     {
+      "label": "B",
+      "text": "LH (luteinizing hormone)"
+     },
+     {
+      "label": "C",
+      "text": "hCG"
+     },
+     {
+      "label": "D",
+      "text": "FSH"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 25,
+    "text": "After ovulation the ruptured follicle becomes the corpus luteum. What does it secrete in large amounts?",
+    "options": [
+     {
+      "label": "A",
+      "text": "GnRH"
+     },
+     {
+      "label": "B",
+      "text": "Progesterone"
+     },
+     {
+      "label": "C",
+      "text": "FSH"
+     },
+     {
+      "label": "D",
+      "text": "Testosterone"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 26,
+    "text": "What happens to the endometrium if fertilization does not occur?",
+    "options": [
+     {
+      "label": "A",
+      "text": "It turns into the corpus luteum"
+     },
+     {
+      "label": "B",
+      "text": "It keeps thickening"
+     },
+     {
+      "label": "C",
+      "text": "It becomes the placenta"
+     },
+     {
+      "label": "D",
+      "text": "Progesterone drops and the lining is shed"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 27,
+    "text": "Which hormone do trophoblast cells secrete to keep the corpus luteum making progesterone?",
+    "options": [
+     {
+      "label": "A",
+      "text": "hCG"
+     },
+     {
+      "label": "B",
+      "text": "LH"
+     },
+     {
+      "label": "C",
+      "text": "Estrogen"
+     },
+     {
+      "label": "D",
+      "text": "FSH"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 28,
+    "text": "Which part of the blastocyst becomes the embryo, and which part forms the placenta?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Inner cell mass becomes the embryo; trophoblast forms the placenta"
+     },
+     {
+      "label": "B",
+      "text": "Trophoblast becomes the embryo; inner cell mass forms the placenta"
+     },
+     {
+      "label": "C",
+      "text": "Morula becomes the embryo; zygote forms the placenta"
+     },
+     {
+      "label": "D",
+      "text": "Both parts become the placenta"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 29,
+    "text": "Which germ layer forms the nervous system, brain and skin?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Endoderm"
+     },
+     {
+      "label": "B",
+      "text": "Mesoderm"
+     },
+     {
+      "label": "C",
+      "text": "Trophoblast"
+     },
+     {
+      "label": "D",
+      "text": "Ectoderm"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 30,
+    "text": "What is the main driver of cervical cancer, and which tests help detect it early?",
+    "options": [
+     {
+      "label": "A",
+      "text": "HIV; PSA blood testing"
+     },
+     {
+      "label": "B",
+      "text": "High-risk HPV; Pap smears and HPV DNA testing"
+     },
+     {
+      "label": "C",
+      "text": "HPV; digital rectal examination"
+     },
+     {
+      "label": "D",
+      "text": "Epstein-Barr virus; Pap smears"
+     }
+    ],
+    "answer": "B"
+   },
+   {
+    "n": 31,
+    "text": "What is endometriosis?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Inflammation of the prostate"
+     },
+     {
+      "label": "B",
+      "text": "Cancer of the cervical epithelium"
+     },
+     {
+      "label": "C",
+      "text": "Absence of menstruation for more than 3 months"
+     },
+     {
+      "label": "D",
+      "text": "Endometrial-like tissue growing outside the uterine cavity"
+     }
+    ],
+    "answer": "D"
+   },
+   {
+    "n": 32,
+    "text": "Which term means abnormally heavy or prolonged menstrual bleeding?",
+    "options": [
+     {
+      "label": "A",
+      "text": "Menorrhagia"
+     },
+     {
+      "label": "B",
+      "text": "Oligomenorrhea"
+     },
+     {
+      "label": "C",
+      "text": "Amenorrhea"
+     },
+     {
+      "label": "D",
+      "text": "Hypomenorrhea"
+     }
+    ],
+    "answer": "A"
+   },
+   {
+    "n": 33,
+    "text": "What is the role of surfactant, made by Type II alveolar cells in the third trimester?",
+    "options": [
+     {
+      "label": "A",
+      "text": "It forms the baby's bones"
+     },
+     {
+      "label": "B",
+      "text": "It nourishes the fetus through the placenta"
+     },
+     {
+      "label": "C",
+      "text": "It prevents the lungs from collapsing at birth"
+     },
+     {
+      "label": "D",
+      "text": "It triggers labor contractions"
+     }
+    ],
+    "answer": "C"
+   },
+   {
+    "n": 34,
+    "text": "Give two differences between mitosis and meiosis.",
+    "options": [],
+    "answer": "Mitosis has 1 division and makes 2 genetically identical diploid (2n = 46) cells for growth and repair. Meiosis has 2 divisions and makes 4 genetically unique haploid (n = 23) gametes, with variation from crossing over (Prophase I) and independent assortment (Metaphase I)."
+   },
+   {
+    "n": 35,
+    "text": "Describe the hormone events that lead to ovulation around Day 14 of the menstrual cycle.",
+    "options": [],
+    "answer": "The hypothalamus releases GnRH, so the anterior pituitary releases FSH and LH. FSH makes follicles mature and secrete rising estrogen. Near Day 14 high estrogen triggers an LH surge, which makes the dominant follicle rupture and release the egg."
+   }
+  ],
+  "src": "quizzes/Biology/9/reproduction-quiz.json",
+  "file": "Biology/9/2__Reproduction.pdf",
+  "id": "q1229612731",
+  "createdAt": 1794370416280
+ }
+]
