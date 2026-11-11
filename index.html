@@ -723,6 +723,32 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
 @keyframes rlSlide{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
 @media(prefers-reduced-motion:reduce){.rl-quill,.rl-bar i{animation:none}}
 </style>
+<style>
+/* ===== phone: locked centered tabs, swipe, tidy PDF reader ===== */
+@media(max-width:760px){
+ .tabs,.grades{display:grid!important;overflow:hidden!important;white-space:normal!important;width:100%;gap:0}
+ .tabs{grid-template-columns:repeat(3,1fr)}
+ .grades{grid-template-columns:repeat(3,1fr);gap:8px}
+ .tabs button{flex:none;width:100%;padding:12px 2px!important;font-size:11.5px!important;letter-spacing:.04em!important;line-height:1.2;text-align:center;display:flex;align-items:center;justify-content:center}
+ .grades button{flex:none;width:100%;padding:10px 4px!important;text-align:center}
+ main{touch-action:pan-y;overscroll-behavior-x:none}
+ .sortbar{justify-content:center}
+ /* PDF reader toolbars */
+ .reader{touch-action:pan-x pan-y;z-index:80!important}.toast{z-index:90!important}
+ .rbar{flex-wrap:wrap!important;overflow:visible!important;justify-content:center;gap:4px!important;padding:6px 8px!important}
+ .rbar b{flex:1 1 calc(100% - 56px)!important;max-width:none!important;min-width:0;font-size:15px}
+ .rbar .back{flex:none}
+ .rbar button{min-width:38px!important;height:38px!important}
+ .rbar #pn{width:46px!important;height:38px}
+ .rbar #zl{min-width:44px!important;font-size:13px}
+ .rbar.tools .gap,.rbar.tools #ns{display:none}
+ .reader:not([data-tool="pen"]):not([data-tool="hl"]) .rbar.tools .sw{display:none}
+ .rbar.tools .sw{flex:1 1 100%;order:9;justify-content:center;gap:14px;padding:4px 0}
+ .rbar .sw button{min-width:28px!important;width:28px!important;height:28px!important}
+ .reader .rview{padding:0!important;touch-action:pan-x pan-y;overscroll-behavior:contain}
+ .reader .pages{padding:8px 6px!important;gap:10px!important}
+}
+</style>
 </head>
 <body class="intro">
 <div id="bg"><u class="au"></u><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
@@ -836,7 +862,7 @@ function syncNav(now){const t=$('.tabs');if(!t)return;
 const ORD=['pdf','quiz','video'];
 function paneSwap(dir=0){const p=$('#pane');if(!p)return draw();syncNav();const id=++swapId;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches||!p.animate){p.innerHTML=pane();return}
-  const DX=innerWidth<=760?0:18,h0=p.offsetHeight,E='cubic-bezier(.22,1,.36,1)';p.style.pointerEvents='none';p.style.overflow='hidden';
+  const DX=innerWidth<=760?30:18,h0=p.offsetHeight,E='cubic-bezier(.22,1,.36,1)';p.style.pointerEvents='none';p.style.overflow='hidden';
   p.animate([{opacity:1,transform:'none'},{opacity:0,transform:`translateX(${-dir*24}px)`}],{duration:240,easing:'cubic-bezier(.4,0,.6,1)',fill:'forwards'}).finished.catch(()=>{}).then(()=>{
     if(id!==swapId)return;p.getAnimations().forEach(a=>a.cancel());p.innerHTML=pane();p.style.height='auto';const h1=p.offsetHeight;
     p.style.height=h0+'px';p.offsetHeight;p.style.transition='height .6s '+E;p.style.height=h1+'px';
@@ -914,13 +940,22 @@ async function openReader(id){
     slots.forEach(s=>{if(s.vis){if(s.ann)sizeAnn(s);paint(s)}});q('#zl').textContent=Math.round(scale*100)+'%'}
   function zoom(f,abs){const ry=view.scrollTop/(view.scrollHeight||1),rx=(view.scrollLeft+view.clientWidth/2)/(view.scrollWidth||1);
     scale=Math.min(5,Math.max(.3,abs||scale*f));layout();view.scrollTop=ry*view.scrollHeight;view.scrollLeft=rx*view.scrollWidth-view.clientWidth/2}
-  const fit=()=>zoom(0,(view.clientWidth-40)/pages[0].getViewport({scale:1}).width);
+  const fit=()=>zoom(0,(view.clientWidth-(innerWidth<=760?16:40))/pages[0].getViewport({scale:1}).width);
   pages.forEach((p,n)=>{const d=document.createElement('div');d.className='pg';d.innerHTML='<div class="pc"></div><div class="tl"></div>';const s={page:p,div:d,pc:d.firstChild,tl:d.lastChild,n,at:0,vis:false};d._s=s;slots.push(s);box.append(d);io.observe(d)});
   fit();setTimeout(hideLoad,6000);
   const go=n=>{n=Math.min(doc.numPages,Math.max(1,n));view.scrollTo({top:slots[n-1].div.offsetTop-12,behavior:'smooth'})};
   q('#pv').onclick=()=>go(cur-1);q('#nx').onclick=()=>go(cur+1);q('#pn').onchange=e=>go(parseInt(e.target.value)||cur);
   q('#zi').onclick=()=>zoom(1.2);q('#zo').onclick=()=>zoom(1/1.2);q('#fw').onclick=fit;
   view.addEventListener('wheel',e=>{if(e.ctrlKey){e.preventDefault();zoom(e.deltaY<0?1.1:1/1.1)}},{passive:false});
+  // pinch with two fingers: live preview while pinching, crisp re-render on release
+  let pz=null;const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+  view.addEventListener('touchstart',e=>{if(e.touches.length!==2)return;const r=view.getBoundingClientRect(),cx=(e.touches[0].clientX+e.touches[1].clientX)/2-r.left,cy=(e.touches[0].clientY+e.touches[1].clientY)/2-r.top;
+    pz={d:dist(e.touches),r:1,cx,cy,rx:(view.scrollLeft+cx)/(view.scrollWidth||1),ry:(view.scrollTop+cy)/(view.scrollHeight||1)};
+    box.style.transformOrigin=(view.scrollLeft+cx-box.offsetLeft)+'px '+(view.scrollTop+cy-box.offsetTop)+'px';box.style.willChange='transform'},{passive:true});
+  view.addEventListener('touchmove',e=>{if(!pz||e.touches.length!==2)return;e.preventDefault();pz.r=Math.min(5/scale,Math.max(.3/scale,dist(e.touches)/pz.d));box.style.transform=`scale(${pz.r})`},{passive:false});
+  const endPz=()=>{if(!pz)return;const z=pz;pz=null;box.style.transform='';box.style.willChange='';if(Math.abs(z.r-1)<.02)return;
+    scale=Math.min(5,Math.max(.3,scale*z.r));layout();view.scrollLeft=z.rx*view.scrollWidth-z.cx;view.scrollTop=z.ry*view.scrollHeight-z.cy};
+  view.addEventListener('touchend',e=>{if(e.touches.length<2)endPz()});view.addEventListener('touchcancel',endPz);
   let raf;view.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const mid=view.scrollTop+view.clientHeight/3;let k=0;slots.forEach((s,n)=>{if(s.div.offsetTop<=mid)k=n});cur=k+1;const pn=q('#pn');if(document.activeElement!==pn)pn.value=cur})})}
 function openItem(id){const i=items.find(x=>x.id===id);
   if(i.type==='pdf')return openReader(id);
@@ -1064,6 +1099,12 @@ function hydrateArt(){if(document.body.classList.contains('intro')){clearTimeout
   artUrl(k).then(list=>{const next=i=>{if(i>=list.length||!el.isConnected)return;const im=new Image();im.alt=ART[k][1];im.style.objectPosition=ART[k][2]||'center';im.decoding='async';
       im.onload=()=>{if(el.isConnected){el.append(im);requestAnimationFrame(()=>el.classList.add('ok'));setTimeout(()=>el.querySelector('svg')?.remove(),1200)}};im.onerror=()=>next(i+1);im.src=list[i]};next(0)}).catch(e=>console.warn('Noesis art:',k,e))})}
 {let t;new MutationObserver(()=>{clearTimeout(t);t=setTimeout(hydrateArt,30)}).observe($('#main'),{childList:true,subtree:true})}
+(()=>{let x0,y0,t0,go=false;const mob=()=>matchMedia('(max-width:760px)').matches;
+  addEventListener('touchstart',e=>{go=false;if(!mob()||e.touches.length!==1||!subj||!$('#pane')||document.querySelector('.reader,.modal'))return;
+    if(e.target.closest('input,select,textarea,.rbar'))return;const t=e.touches[0];x0=t.clientX;y0=t.clientY;t0=Date.now();go=true},{passive:true});
+  addEventListener('touchend',e=>{if(!go)return;go=false;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
+    if(Date.now()-t0>800||Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.6)return;
+    const n=ORD.indexOf(tab)+(dx<0?1:-1);if(n>=0&&n<ORD.length)setTab(ORD[n])},{passive:true})})();
 function makeTex(){}
 
 function heroShow(){const el=document.querySelector('.art[data-art="hero"]');if(!el)return;el.dataset.ok=1;
