@@ -1,0 +1,335 @@
+{
+ "title": "3. Nervous System: practice quiz",
+ "file": "Biology/9/3. Nervous System.pdf",
+ "questions": [
+  {
+   "text": "Which nervous system function gathers clues from inside and outside the body using the senses?",
+   "options": [
+    "Integration",
+    "Sensory input",
+    "Motor output",
+    "Excretion"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "In the hot cocoa example, what is the 'motor output'?",
+   "options": [
+    "Your fingers touch the hot cup",
+    "Your brain decides 'Ouch, that is too hot!'",
+    "Your skin feels warm",
+    "Your arm muscles pull your hand away from the cup"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Where does integration (processing and deciding) take place?",
+   "options": [
+    "In the brain and spinal cord",
+    "In the arms and legs",
+    "In the sense organs only",
+    "In the muscles"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "The central nervous system (CNS) is made up of...",
+   "options": [
+    "all nerves outside the brain and spinal cord",
+    "the somatic and autonomic systems",
+    "the brain and the spinal cord",
+    "the sympathetic and parasympathetic systems"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What does the peripheral nervous system (PNS) do?",
+   "options": [
+    "Stores memories and makes major decisions",
+    "Produces hormones",
+    "Carries messages between the CNS and the rest of the body",
+    "Protects the brain from injury"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "Which branch of the PNS controls voluntary (conscious) movements?",
+   "options": [
+    "Somatic nervous system",
+    "Autonomic nervous system",
+    "Sympathetic nervous system",
+    "Parasympathetic nervous system"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Heartbeat, digestion, breathing, and sweating are controlled by the...",
+   "options": [
+    "somatic nervous system",
+    "cerebellum only",
+    "spinal cord only",
+    "autonomic nervous system"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which brain region thinks, learns, stores memory, and controls voluntary movement?",
+   "options": [
+    "Cerebellum",
+    "Cerebrum",
+    "Brainstem",
+    "Thalamus"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which brain region controls balance, coordination, and posture?",
+   "options": [
+    "Cerebrum",
+    "Cerebellum",
+    "Brainstem",
+    "Hypothalamus"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which part of the brain controls breathing, heart rate, blood pressure, and swallowing?",
+   "options": [
+    "Cerebrum",
+    "Cerebellum",
+    "Thalamus",
+    "Brainstem (pons and medulla)"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "The hypothalamus controls...",
+   "options": [
+    "body temperature, hunger, thirst, and hormones",
+    "balance and coordination",
+    "voluntary movement",
+    "vision only"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "What are neurons?",
+   "options": [
+    "Cells that store fat",
+    "Cells that carry oxygen",
+    "Specialized messenger cells that pass electrical signals",
+    "Cells that make bone"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What do dendrites do?",
+   "options": [
+    "Insulate the axon",
+    "Release neurotransmitters",
+    "Receive signals from neighboring cells",
+    "Carry impulses away to target cells"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What is the job of the axon hillock?",
+   "options": [
+    "To collect incoming signals and decide whether a nerve impulse fires",
+    "To insulate the axon",
+    "To keep the nucleus healthy",
+    "To release neurotransmitters"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "What does the axon do?",
+   "options": [
+    "Receives chemical signals",
+    "Makes the myelin sheath",
+    "Contains the nucleus",
+    "Carries the electrical impulse away toward target cells"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "What is the function of the myelin sheath?",
+   "options": [
+    "It receives signals from other cells",
+    "It insulates the axon and speeds up signal transmission",
+    "It stores neurotransmitters",
+    "It decides if an impulse fires"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "What allows impulses to jump quickly along the axon ('saltatory conduction')?",
+   "options": [
+    "Dendrites",
+    "Nodes of Ranvier",
+    "Synaptic terminals",
+    "The cell body"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "What do synaptic terminals release across the synaptic gap?",
+   "options": [
+    "Myelin",
+    "Adrenaline only",
+    "Electrical wires",
+    "Neurotransmitters"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which system is known as the 'fight or flight' system?",
+   "options": [
+    "Sympathetic nervous system",
+    "Parasympathetic nervous system",
+    "Somatic nervous system",
+    "Central nervous system"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "What does the sympathetic system do to the pupils?",
+   "options": [
+    "Constricts (shrinks) them",
+    "Closes them completely",
+    "Dilates (widens) them",
+    "Nothing"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What does the parasympathetic system do to the heart rate?",
+   "options": [
+    "Speeds it up",
+    "Stops the heart",
+    "Slows it down to the rest level",
+    "Makes it irregular"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What happens to digestion during 'fight or flight'?",
+   "options": [
+    "It is inhibited and slows down",
+    "It speeds up",
+    "It stays the same",
+    "It stops the heartbeat"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Which gland releases adrenaline when the sympathetic system is active?",
+   "options": [
+    "Salivary glands",
+    "Thyroid",
+    "Pancreas",
+    "Adrenal glands"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Which condition involves brain cell loss and abnormal protein clumps (plaques and tangles) that damage memory?",
+   "options": [
+    "Parkinson's disease",
+    "Alzheimer's disease",
+    "Epilepsy",
+    "Multiple sclerosis"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Which condition is caused by the gradual loss of brain cells that make dopamine?",
+   "options": [
+    "Alzheimer's disease",
+    "Parkinson's disease",
+    "Epilepsy",
+    "Spinal cord injury"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Epilepsy is caused by...",
+   "options": [
+    "loss of dopamine-producing cells",
+    "the immune system attacking myelin",
+    "a severed spinal cord",
+    "sudden abnormal bursts of electrical activity across brain nerve cells"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "In multiple sclerosis (MS), what does the immune system accidentally attack?",
+   "options": [
+    "The protective myelin sheath around nerves",
+    "The dopamine-making cells",
+    "The cerebellum",
+    "The bones of the spine"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "Which habit helps prevent spinal cord injuries?",
+   "options": [
+    "Eating more sugar",
+    "Skipping sports gear",
+    "Wearing seatbelts and never diving into shallow water",
+    "Staying awake all night"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "In a reflex arc, which part processes the signal in the spinal cord without waiting for the brain?",
+   "options": [
+    "Sensory receptor",
+    "Motor neuron",
+    "Interneuron",
+    "Effector muscle"
+   ],
+   "answer": "C"
+  },
+  {
+   "text": "What is the first step of a reflex arc?",
+   "options": [
+    "A sensory receptor detects a sudden stimulus",
+    "The muscle contracts",
+    "The brain makes a decision",
+    "The motor neuron fires"
+   ],
+   "answer": "A"
+  },
+  {
+   "text": "In a reflex arc, which part carries the command out to the muscles?",
+   "options": [
+    "Sensory neuron",
+    "Interneuron",
+    "Receptor",
+    "Motor neuron"
+   ],
+   "answer": "D"
+  },
+  {
+   "text": "Why is 8-10 hours of sleep good for the nervous system?",
+   "options": [
+    "It makes neurons grow longer axons",
+    "It lets glial cells clear waste and helps build permanent memories",
+    "It replaces myelin completely",
+    "It stops all neuron activity forever"
+   ],
+   "answer": "B"
+  },
+  {
+   "text": "Describe the five steps of a reflex arc using the example of stepping on a thumb tack."
+  },
+  {
+   "text": "Compare the sympathetic and parasympathetic systems. Give two organs and say how each system affects them."
+  },
+  {
+   "text": "Explain why the myelin sheath and the nodes of Ranvier are important for nerve signals."
+  }
+ ]
+}

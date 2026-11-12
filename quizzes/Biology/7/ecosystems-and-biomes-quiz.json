@@ -1,0 +1,525 @@
+{
+  "title": "Ecosystems and Biome Conservation: practice quiz",
+  "file": "Biology/9/5__Ecosystem.pdf",
+  "questions": [
+    {
+      "text": "What is ecology?",
+      "options": [
+        "The study of the structure of cells",
+        "The scientific study of interactions between living organisms and their physical environment",
+        "The study of rock layers",
+        "The study of weather forecasts"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "How many structural levels of organization does the guide list, from cell to biosphere?",
+      "options": [
+        "5",
+        "7",
+        "12",
+        "10"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Which level is a group of individuals of the same species living in a specific area at the same time?",
+      "options": [
+        "Population",
+        "Community",
+        "Ecosystem",
+        "Biome"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "What is a community?",
+      "options": [
+        "Individuals of a single species",
+        "The living and non-living parts together",
+        "All interacting populations of different species in a shared environment",
+        "A large region with a distinct climate"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "An ecosystem is a community of biotic organisms interacting with...",
+      "options": [
+        "only other animals",
+        "only plants",
+        "abiotic chemical and physical factors",
+        "only the biosphere"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "A biome is best described as...",
+      "options": [
+        "a large regional unit with distinct climate patterns, dominant vegetation, and adapted wildlife",
+        "a single group of organisms of one species",
+        "the thin layer of air around Earth",
+        "a group of specialized cells"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which level is the global sum of all ecosystems?",
+      "options": [
+        "Biome",
+        "Community",
+        "Population",
+        "Biosphere"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Which of these is an abiotic factor?",
+      "options": [
+        "Fungi",
+        "Soil minerals",
+        "Bacteria",
+        "Phytoplankton"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "How does energy enter most ecosystems?",
+      "options": [
+        "As sunlight, which producers convert into chemical energy by photosynthesis",
+        "As heat from decomposers",
+        "As water from rivers",
+        "As carbon dioxide from animals"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which organism is a producer (Level 1)?",
+      "options": [
+        "Zooplankton",
+        "Sea turtle",
+        "Giant kelp",
+        "Tapir"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Primary consumers are...",
+      "options": [
+        "carnivores that eat herbivores",
+        "herbivores that eat plants and algae",
+        "top predators with no natural enemies",
+        "decomposers of dead matter"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which organism is a secondary consumer?",
+      "options": [
+        "Kangaroo rat",
+        "Giant kelp",
+        "Earthworm",
+        "Fennec fox"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Tertiary consumers, such as the great white shark and jaguar, are...",
+      "options": [
+        "herbivores",
+        "apex predators with no natural enemies",
+        "producers",
+        "decomposers"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "What is the role of decomposers?",
+      "options": [
+        "Convert sunlight to glucose",
+        "Hunt herbivores",
+        "Control weather",
+        "Break down dead organic matter and recycle soil nutrients"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Deserts are defined as areas receiving less than how much annual precipitation?",
+      "options": [
+        "25 cm (10 inches)",
+        "100 cm (40 inches)",
+        "2 cm (1 inch)",
+        "250 cm (100 inches)"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "About what fraction of Earth's land surface do deserts cover?",
+      "options": [
+        "One-tenth",
+        "One-half",
+        "One-third",
+        "Two-thirds"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "The Sahara and the Sonoran are examples of which type of desert?",
+      "options": [
+        "Polar",
+        "Coastal",
+        "Subtropical",
+        "Semiarid"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "The Antarctic Ice Sheet is classified as a...",
+      "options": [
+        "polar desert",
+        "coastal desert",
+        "subtropical desert",
+        "semiarid desert"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Desert plants that are adapted to scarce water are called...",
+      "options": [
+        "xerocoles",
+        "epiphytes",
+        "autotrophs only",
+        "xerophytes"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Which adaptation do deep-taproot desert plants use?",
+      "options": [
+        "Aerial prop roots that filter salt",
+        "Vertical taproots extending 10-30 m to reach underground water",
+        "Buttress roots for stability",
+        "Floating leaves"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "How does the Saguaro cactus survive in the desert?",
+      "options": [
+        "Its pleated stem stores a large amount of water and its leaves are reduced to spines",
+        "It has broad, dark leaves to catch sunlight",
+        "It lives entirely underground",
+        "It gets water from morning dew through its feet"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Desert animals are called...",
+      "options": [
+        "xerophytes",
+        "epiphytes",
+        "xerocoles",
+        "decomposers"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "How does the dromedary camel cope with desert life?",
+      "options": [
+        "Large ears that detect prey underground",
+        "Fat-storing humps, padded feet, and the ability to drink about 80 L at once",
+        "Grooved scales that channel dew",
+        "Sideways looping movement"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "What is the function of the fennec fox's oversized ears?",
+      "options": [
+        "They store water",
+        "They channel dew to the mouth",
+        "They produce bioluminescence",
+        "They radiate body heat and detect underground prey"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Where does the kangaroo rat get its water?",
+      "options": [
+        "It drinks from rivers each day",
+        "It produces metabolic water from dry seeds",
+        "It stores water in a hump",
+        "It absorbs rain through its skin"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "How does the thorny devil collect water?",
+      "options": [
+        "Its humps store water",
+        "It drinks 80 L at once",
+        "It digs deep wells",
+        "Grooves in its scales channel morning dew to its mouth"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Why does the sidewinder rattlesnake move sideways in a looping motion?",
+      "options": [
+        "To minimize body contact with blistering hot sand",
+        "To hunt in groups",
+        "To dig for water",
+        "To glide through the air"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Aquatic ecosystems cover over what part of Earth's surface?",
+      "options": [
+        "30%",
+        "50%",
+        "70%",
+        "10%"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "What percentage of all water is marine (saltwater)?",
+      "options": [
+        "2.5%",
+        "50%",
+        "97.5%",
+        "70%"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "The epipelagic zone extends from the surface to about...",
+      "options": [
+        "200 m",
+        "20 m",
+        "1,000 m",
+        "4,000 m"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which ocean zone lies between 1,000 and 4,000 m?",
+      "options": [
+        "Epipelagic",
+        "Mesopelagic",
+        "Hadal",
+        "Bathypelagic"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "The hadal zone is found at depths of...",
+      "options": [
+        "200 to 1,000 m",
+        "6,000 m and deeper",
+        "1,000 to 4,000 m",
+        "0 to 200 m"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which adaptation is typical of the mesopelagic zone?",
+      "options": [
+        "Bioluminescent counter-illumination and massive tubular eyes",
+        "Stilt-like fins on the mud",
+        "Expanding stomachs and needle fangs only",
+        "Padded feet and double eyelashes"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "What do chemosynthetic bacteria at hydrothermal vents do?",
+      "options": [
+        "Produce oxygen using sunlight",
+        "Eat phytoplankton",
+        "Convert hydrogen sulfide into organic energy without sunlight",
+        "Break down kelp"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "What is the function of mangrove prop roots?",
+      "options": [
+        "They store 200 gallons of water",
+        "They filter saltwater and shield coastlines",
+        "They produce bioluminescence",
+        "They catch sunlight in the understory"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Tropical rainforests cover only about 6% of land but house over what share of plant and animal species?",
+      "options": [
+        "5%",
+        "20%",
+        "10%",
+        "50%"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "How many vertical strata does a tropical rainforest have?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "6"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which rainforest layer is the tallest (40-70 m)?",
+      "options": [
+        "Canopy layer",
+        "Understory layer",
+        "Forest floor",
+        "Emergent layer"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Emergent trees such as the kapok have flared roots called...",
+      "options": [
+        "buttress roots",
+        "prop roots",
+        "taproots",
+        "aerial roots"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Epiphytes that absorb cloud moisture directly are typical of the...",
+      "options": [
+        "forest floor",
+        "emergent layer",
+        "canopy layer",
+        "understory layer"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Understory plants have broad, dark leaves to...",
+      "options": [
+        "store water",
+        "resist strong winds",
+        "capture the small amount of filtered sunlight (about 2-15%)",
+        "avoid heat"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Which animals are typical of the rainforest understory?",
+      "options": [
+        "Green iguana and poison dart frog",
+        "Harpy eagle and scarlet macaw",
+        "Howler monkey and toucan",
+        "Jaguar and tapir"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which is a primary cause of deforestation?",
+      "options": [
+        "Drip irrigation",
+        "Marine protected areas",
+        "Wildlife corridors",
+        "Commercial logging and cattle ranching"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Overfishing by industrial trawling can trigger...",
+      "options": [
+        "more sunlight in the deep sea",
+        "trophic cascades and the collapse of forage fish",
+        "faster coral growth",
+        "an increase in apex predators"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "What causes oxygen-depleted 'dead zones' in water?",
+      "options": [
+        "Algal blooms from agricultural fertilizer runoff (eutrophication)",
+        "Too many predators",
+        "Cold ocean currents",
+        "Heavy rainfall alone"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "During coral bleaching, thermal stress causes corals to...",
+      "options": [
+        "grow faster",
+        "absorb more plastic",
+        "expel their zooxanthellae algae",
+        "produce more oxygen"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "The drying of the Aral Sea is given as an example of...",
+      "options": [
+        "eutrophication",
+        "desertification",
+        "coral bleaching",
+        "overfishing"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "What is a no-take marine reserve designed to do?",
+      "options": [
+        "Increase trawling",
+        "Add fertilizer to oceans",
+        "Remove coral",
+        "Restore ocean food webs by prohibiting fishing"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Which practice helps halt soil erosion and desertification?",
+      "options": [
+        "Overgrazing",
+        "Drip irrigation and terracing",
+        "Clearing shelterbelts",
+        "Increasing fertilizer runoff"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Wildlife corridors and protected national parks help prevent...",
+      "options": [
+        "photosynthesis",
+        "rainfall",
+        "tides",
+        "habitat fragmentation"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Riparian buffer strips and wastewater treatment help to...",
+      "options": [
+        "eliminate toxic dead zones",
+        "increase plastic waste",
+        "reduce oxygen",
+        "raise ocean acidity"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Describe the ten levels of biological organization from cell to biosphere, with one example of any three levels."
+    },
+    {
+      "text": "Explain how organisms in one biome (desert, ocean, or rainforest) are adapted to their environment, using two examples."
+    },
+    {
+      "text": "Choose two environmental threats and explain their causes and effects. Then suggest one prevention measure for each."
+    }
+  ]
+}

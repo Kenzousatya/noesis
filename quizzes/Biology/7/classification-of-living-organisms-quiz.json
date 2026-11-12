@@ -1,0 +1,355 @@
+{
+  "title": "Classification of Living Organisms: practice quiz",
+  "file": "Biology/9/4__Classifications.pdf",
+  "questions": [
+    {
+      "text": "What is biological taxonomy?",
+      "options": [
+        "The study of how organisms move",
+        "The science of naming, defining, and classifying organisms based on shared characteristics",
+        "The study of how ecosystems recycle energy",
+        "The measurement of body size in animals"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Who introduced the standardized hierarchical system of classification in the 18th century?",
+      "options": [
+        "R.H. Whittaker",
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Carl Linnaeus"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "How many primary taxonomic ranks are in the Linnaean hierarchy?",
+      "options": [
+        "Seven",
+        "Five",
+        "Eight",
+        "Ten"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which list shows the ranks from broadest to most specific?",
+      "options": [
+        "Species, Genus, Family, Order, Class, Phylum, Kingdom",
+        "Kingdom, Class, Phylum, Order, Genus, Family, Species",
+        "Kingdom, Phylum, Class, Order, Family, Genus, Species",
+        "Phylum, Kingdom, Order, Class, Family, Species, Genus"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "In binomial nomenclature, the first word of a species name is the...",
+      "options": [
+        "species epithet, written in lowercase",
+        "family, written with a capital letter",
+        "genus, written with a capital letter",
+        "kingdom, written in lowercase"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Which is the correct way to write the scientific name of the lion?",
+      "options": [
+        "Panthera leo",
+        "panthera Leo",
+        "Panthera Leo",
+        "panthera leo"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "At which rank do humans and lions first differ in classification?",
+      "options": [
+        "Kingdom",
+        "Phylum",
+        "Class",
+        "Order (Primates vs. Carnivora)"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "To which family does the lion belong?",
+      "options": [
+        "Hominidae",
+        "Felidae",
+        "Canidae",
+        "Ursidae"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Animals in the phylum Chordata possess a...",
+      "options": [
+        "notochord or spinal cord",
+        "cellulose cell wall",
+        "shell made of chitin",
+        "true root system"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Who proposed the Five-Kingdom Classification in 1969?",
+      "options": [
+        "Carl Linnaeus",
+        "Louis Pasteur",
+        "R.H. Whittaker",
+        "Robert Hooke"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Which of these is NOT one of Whittaker's three criteria?",
+      "options": [
+        "Cellular complexity",
+        "Habitat (land or water)",
+        "Body organization",
+        "Mode of nutrition"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which kingdom contains single-celled prokaryotes with no membrane-bound nucleus?",
+      "options": [
+        "Protista",
+        "Fungi",
+        "Plantae",
+        "Monera"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Amoeba and Paramecium belong to which kingdom?",
+      "options": [
+        "Monera",
+        "Protista",
+        "Fungi",
+        "Animalia"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which kingdom has chitinous cell walls and absorbs nutrients from decaying organic matter?",
+      "options": [
+        "Plantae",
+        "Animalia",
+        "Monera",
+        "Fungi"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "Yeast is a unicellular organism that belongs to the kingdom...",
+      "options": [
+        "Fungi",
+        "Protista",
+        "Monera",
+        "Plantae"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "What is the network of hyphae in a fungus called?",
+      "options": [
+        "Thallus",
+        "Rhizoid",
+        "Mycelium",
+        "Sporangium"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Which kingdom is made of multicellular eukaryotic autotrophs with cellulose cell walls?",
+      "options": [
+        "Animalia",
+        "Fungi",
+        "Plantae",
+        "Protista"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Which kingdom is made of multicellular eukaryotic heterotrophs that lack cell walls?",
+      "options": [
+        "Animalia",
+        "Plantae",
+        "Fungi",
+        "Monera"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Plants that do not produce seeds belong to the sub-kingdom...",
+      "options": [
+        "Phanerogamae",
+        "Angiosperms",
+        "Gymnosperms",
+        "Cryptogamae"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "The body of algae (Thallophyta) is called a thallus because it...",
+      "options": [
+        "has true roots and leaves",
+        "has no differentiation into root, stem, or leaves",
+        "has xylem and phloem",
+        "produces cones"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which plant division is non-vascular and needs moist environments for its flagellated sperm?",
+      "options": [
+        "Bryophyta (mosses and liverworts)",
+        "Pteridophyta (ferns)",
+        "Gymnosperms",
+        "Angiosperms"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Which are the first true land plants with xylem and phloem, reproducing via spores on fronds?",
+      "options": [
+        "Bryophyta",
+        "Thallophyta",
+        "Pteridophyta (ferns and horsetails)",
+        "Angiosperms"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Gymnosperms such as pines and cycads are characterized by...",
+      "options": [
+        "seeds enclosed in fruit",
+        "naked seeds borne in cones",
+        "spores on fronds",
+        "flowers with petals"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Angiosperms are different from gymnosperms because their seeds are...",
+      "options": [
+        "naked in cones",
+        "produced as spores",
+        "found only in the roots",
+        "enclosed within a fruit wall (ovary)"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "How many cotyledons does a monocot seed have?",
+      "options": [
+        "Two",
+        "One",
+        "Three",
+        "Four"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which root system is typical of dicots?",
+      "options": [
+        "A fibrous, adventitious root system",
+        "Rhizoids only",
+        "No roots at all",
+        "A dominant central taproot with lateral branches"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "How are the vascular bundles arranged in a dicot stem?",
+      "options": [
+        "In an organized ring",
+        "Scattered throughout the ground tissue",
+        "In a single central line",
+        "They are absent"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "Parallel veins in a leaf are typical of...",
+      "options": [
+        "dicots",
+        "algae",
+        "monocots",
+        "mosses"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "A flower has its petals and stamens in multiples of 3. It most likely belongs to a...",
+      "options": [
+        "dicot",
+        "gymnosperm",
+        "monocot",
+        "fern"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "How do dicot leaves attach to the stem?",
+      "options": [
+        "Through a slender stalk called a petiole",
+        "By a sheath that wraps around the stem",
+        "By rhizoids",
+        "They are not attached"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "A leaf with a smooth edge has which type of margin?",
+      "options": [
+        "Toothed",
+        "Lobed",
+        "Serrated",
+        "Entire"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "What is a compound leaf?",
+      "options": [
+        "A leaf with one unbroken blade",
+        "A leaf whose blade is divided into leaflets",
+        "A leaf shaped like a needle",
+        "A leaf with a smooth edge"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "Which is a way leaves can be arranged on a stem?",
+      "options": [
+        "Alternate, opposite, or whorled",
+        "Entire, toothed, or lobed",
+        "Simple, compound, or round",
+        "Parallel, pinnate, or palmate"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "A dichotomous key is built from...",
+      "options": [
+        "a list of random guesses",
+        "a single yes-or-no question",
+        "a series of paired, mutually exclusive choices",
+        "a map of leaf shapes"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "Compare monocots and dicots by describing three differences, such as seeds, roots, leaves, stems, or flowers."
+    },
+    {
+      "text": "Use humans (Homo sapiens) as an example to explain the seven ranks of the Linnaean hierarchy."
+    },
+    {
+      "text": "Explain how a dichotomous key helps scientists identify an unknown plant."
+    }
+  ]
+}
