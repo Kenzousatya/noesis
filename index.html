@@ -749,6 +749,36 @@ main{padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
  .reader .pages{padding:8px 6px!important;gap:10px!important}
 }
 </style>
+<style id="gold-gate">
+/* ===== Gold scrollbar ===== */
+*::-webkit-scrollbar{width:15px;height:15px}
+*::-webkit-scrollbar-track{background:linear-gradient(90deg,#150d08,#26180d 55%,#150d08);border-left:1px solid #5a4128;box-shadow:inset 0 0 7px rgba(0,0,0,.65)}
+*::-webkit-scrollbar-track:horizontal{background:linear-gradient(180deg,#150d08,#26180d 55%,#150d08);border-left:0;border-top:1px solid #5a4128}
+*::-webkit-scrollbar-thumb{min-height:52px;min-width:52px;border:3px solid #1b110a;border-radius:9px;background:linear-gradient(90deg,#9a6f1f,#e9c56d 36%,#f6df98 50%,#d8a944 66%,#9a6f1f);box-shadow:inset 0 0 0 1px rgba(255,236,170,.38)}
+*::-webkit-scrollbar-thumb:horizontal{background:linear-gradient(180deg,#9a6f1f,#e9c56d 36%,#f6df98 50%,#d8a944 66%,#9a6f1f)}
+*::-webkit-scrollbar-thumb:hover{filter:brightness(1.12) saturate(1.1)}
+*::-webkit-scrollbar-thumb:active{filter:brightness(1.22)}
+*::-webkit-scrollbar-button{display:none;width:0;height:0}
+*::-webkit-scrollbar-corner{background:#150d08}
+@supports (-moz-appearance:none){*{scrollbar-width:thin;scrollbar-color:#d8a944 #1b110a}}
+/* ===== Passphrase gate (shown on the startup screen) ===== */
+.gate{position:absolute;left:50%;width:min(430px,calc(100vw - 36px));padding:26px 30px 24px;text-align:center;color:#ead9b6;background:linear-gradient(180deg,rgba(44,29,18,.96),rgba(23,14,8,.97));border:3px double #b8872b;border-radius:2px;box-shadow:0 30px 70px -20px rgba(0,0,0,.8),inset 0 0 0 1px rgba(216,169,68,.18);opacity:0;transform:translate(-50%,14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.gate.on{opacity:1;transform:translate(-50%,0)}
+.gate.ok{opacity:0;transform:translate(-50%,-8px) scale(.98);transition-duration:.5s}
+.gate.bad{animation:gshake .45s}
+@keyframes gshake{20%{transform:translate(calc(-50% - 9px),0)}40%{transform:translate(calc(-50% + 8px),0)}60%{transform:translate(calc(-50% - 5px),0)}80%{transform:translate(calc(-50% + 3px),0)}}
+.gate .g-eye{font:500 12px/1 'Cormorant SC','Cormorant Garamond',Georgia,serif;letter-spacing:.34em;text-transform:uppercase;color:#d8a944}
+.gate h2{margin:12px 0 18px;font:italic 500 30px/1.1 'Cormorant Garamond',Georgia,serif;color:#f1e3c4}
+.gate .g-row{display:flex;align-items:center;border-bottom:1.5px solid #b8872b;padding-bottom:4px;transition:border-color .3s,box-shadow .3s}
+.gate .g-row:focus-within{border-color:#f0cf7a;box-shadow:0 7px 14px -11px #f0cf7a}
+.gate input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#f6ecd2;font:500 21px/1.3 'Cormorant Garamond',Georgia,serif;letter-spacing:.04em;padding:6px 2px;text-align:left}
+.gate input::placeholder{color:#8f7c58;font-style:italic}
+.gate .g-show{background:none;border:0;color:#d8a944;font:500 12px 'Cormorant SC','Cormorant Garamond',Georgia,serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;padding:6px 2px 6px 10px}
+.gate .g-err{min-height:20px;margin:10px 0 6px;font:italic 500 16px/1.2 'Cormorant Garamond',Georgia,serif;color:#e0a07c}
+.gate .g-go{margin-top:4px;padding:11px 36px;border:1px solid #f0cf7a;border-radius:2px;background:linear-gradient(180deg,#e9c56d,#b8872b);color:#2a1a0e;font:700 14px 'Cormorant SC','Cormorant Garamond',Georgia,serif;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 18px -10px #000}
+.gate .g-go:hover{filter:brightness(1.08)}.gate .g-go:disabled{opacity:.55;cursor:default}
+@media(prefers-reduced-motion:reduce){.gate,.gate.on{transition:none}.gate.bad{animation:none}}
+</style>
 </head>
 <body class="intro">
 <div id="bg"><u class="au"></u><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
@@ -1003,22 +1033,44 @@ if(!rm.matches)addEventListener('pointermove',e=>{bg.style.setProperty('--mx',(e
 })();
 applyTheme();
 document.fonts?.ready.then(()=>syncNav(true));
+const GATE_HASH='b49cda5ee21a35973f5374da92a0c15076a19e5d20b5f2dfb0d01b6b31ae8a51',
+gnorm=s=>s.normalize('NFC').trim().replace(/\s+/g,' ').toLowerCase(),
+gsha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join(''),
+gget=()=>{try{return sessionStorage.getItem('noesis_ok')==='1'}catch(e){return false}},
+gset=()=>{try{sessionStorage.setItem('noesis_ok','1')}catch(e){}};
+const gate=(sp,q,T,gp)=>new Promise(done=>{
+  if(gget())return done();
+  const lock=[...document.querySelectorAll('main,aside#side')];lock.forEach(n=>n.inert=true);
+  const up=Math.min(innerHeight*.2,170),cx=gp[0],cy=gp[1];
+  q.animate([{transform:T(cx,cy,1,-4)},{transform:T(cx,cy-up,.62,-4)}],{duration:900,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});
+  gp[1]=cy-up;gp[2]=.62;sp.removeAttribute('aria-hidden');
+  const f=document.createElement('form');f.className='gate';f.setAttribute('role','dialog');f.setAttribute('aria-label','Passphrase');f.style.top=(cy-up+34)+'px';
+  f.innerHTML='<div class="g-eye">Restricted library</div><h2>Enter the passphrase</h2><div class="g-row"><input type="password" name="pp" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Passphrase" aria-label="Passphrase"><button type="button" class="g-show" aria-label="Show passphrase">Show</button></div><div class="g-err" role="alert"></div><button class="g-go">Enter</button>';
+  sp.append(f);
+  const inp=f.pp,err=f.querySelector('.g-err'),go=f.querySelector('.g-go');
+  requestAnimationFrame(()=>{f.classList.add('on');setTimeout(()=>inp.focus({preventScroll:true}),450)});
+  f.querySelector('.g-show').onclick=e=>{const s=inp.type==='password';inp.type=s?'text':'password';e.target.textContent=s?'Hide':'Show';inp.focus()};
+  f.onsubmit=async e=>{e.preventDefault();if(go.disabled)return;
+    if(!(window.crypto&&crypto.subtle)){err.textContent='Please open this site over https:// to sign in.';return}
+    go.disabled=true;let ok=false;try{ok=(await gsha(gnorm(inp.value)))===GATE_HASH}catch(x){}
+    if(ok){gset();err.textContent='';f.classList.remove('on');f.classList.add('ok');lock.forEach(n=>n.inert=false);setTimeout(()=>{f.remove();done()},550);return}
+    err.textContent='That is not the passphrase. Try again.';f.classList.remove('bad');void f.offsetWidth;f.classList.add('bad');inp.select();setTimeout(()=>{go.disabled=false},700)}});
 const intro=loaded=>{const sp=$('#splash');if(!sp)return;
   const q=sp.querySelector('.spq'),idle=()=>('requestIdleCallback' in window?requestIdleCallback(makeTex,{timeout:1500}):setTimeout(makeTex,80)),
   fin=()=>{document.body.classList.remove('intro','enter');sp.classList.add('out');setTimeout(()=>sp.remove(),800);idle()};
   const W=innerWidth,H=innerHeight,S=Math.round(Math.min(260,W*.5)),cx=W/2-S*.36,cy=H/2+S*.45,
   T=(x,y,k,r)=>`translate(${(x-.14*S).toFixed(1)}px,${(y-.95*S).toFixed(1)}px) rotate(${r}deg) scale(${k.toFixed(3)})`;
   q.innerHTML=QUILL();q.style.cssText=`width:${S}px;height:${S}px;transform-origin:14% 95%;filter:none;will-change:transform,opacity;transform:${T(cx,cy,1,-4)}`;
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches){loaded.then(fin);return}
+  let gp=[cx,cy,1,-4];if(matchMedia('(prefers-reduced-motion:reduce)').matches){loaded.then(()=>gate(sp,q,T,gp)).then(fin);return}
   q.style.opacity=0;
   const a=q.animate([{opacity:0,transform:T(cx,cy+S*.1,.86,-14)},{opacity:1,transform:T(cx,cy,1,-4)}],{duration:1600,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});
-  Promise.all([a.finished.catch(()=>{}),new Promise(r=>setTimeout(r,1900)),loaded]).then(()=>{
+  Promise.all([a.finished.catch(()=>{}),new Promise(r=>setTimeout(r,1900)),loaded]).then(()=>gate(sp,q,T,gp)).then(()=>{
     const el=[...document.querySelectorAll('.wmh .qm')].find(n=>n.offsetParent);
     sp.classList.add('bgf');document.body.classList.add('enter');
-    if(!el){q.animate([{opacity:1,transform:T(cx,cy,1,-4)},{opacity:0,transform:T(cx+S*.08,cy-S*.1,.92,2)}],{duration:1000,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'}).finished.catch(()=>{}).then(()=>{document.body.classList.remove('intro','enter');sp.remove();idle()});return}
+    if(!el){q.animate([{opacity:1,transform:T(...gp)},{opacity:0,transform:T(cx+S*.08,cy-S*.1,.92,2)}],{duration:1000,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'}).finished.catch(()=>{}).then(()=>{document.body.classList.remove('intro','enter');sp.remove();idle()});return}
     const g=el.getBoundingClientRect(),k=g.width/S,tx=g.left+.14*g.width,ty=g.top+.95*g.height,
     mx=Math.max(S*.3,Math.min(W-S*.3,(cx+tx)/2)),my=Math.max(S*.95,Math.min(cy,ty)-H*.05);
-    q.animate([{transform:T(cx,cy,1,-4)},{transform:T(mx,my,(1+k)/2+.1,-7),offset:.5},{transform:T(tx,ty,k,0)}],{duration:1700,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'})
+    q.animate([{transform:T(...gp)},{transform:T(mx,my,(1+k)/2+.1,-7),offset:.5},{transform:T(tx,ty,k,0)}],{duration:1700,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'})
      .finished.catch(()=>{}).then(()=>{document.body.classList.remove('intro','enter');sp.remove();idle()})})};
 
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,
