@@ -13627,5 +13627,23 @@
   "title": "4. Ecosystem",
   "file": "Biology/7/4. Ecosystem.pdf",
   "createdAt": 1794489208262
+ },
+ {
+  "id": "p0525591869",
+  "type": "pdf",
+  "subject": "Biology",
+  "grade": 7,
+  "title": "1. Scientific Methods and Works",
+  "file": "Biology/7/1. Scientific Methods and Works.pdf",
+  "createdAt": 1794757398694
+ },
+ {
+  "id": "p0350466812",
+  "type": "pdf",
+  "subject": "Biology",
+  "grade": 7,
+  "title": "2. Characteristics of Living Things",
+  "file": "Biology/7/2. Characteristics of Living Things.pdf",
+  "createdAt": 1794757398695
  }
 ]
