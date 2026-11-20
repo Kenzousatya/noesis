@@ -11,7 +11,7 @@ import {
   Menu as MenuIcon,
   Moon,
   PanelLeftClose,
-  PanelLeftOpen,
+  Pin,
   Search,
   Settings2,
   Star,
@@ -235,19 +235,41 @@ function NavContent({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
 }
 
 function Sidebar() {
-  const { settings, toggleSidebar } = useSettings();
-  const collapsed = settings.sidebarCollapsed;
+  const { settings, setSidebarCollapsed } = useSettings();
+  // `pinned` is the saved preference; the rail peeks open on hover so it can be
+  // used without permanently taking space away from the page.
+  const pinned = !settings.sidebarCollapsed;
+  const [peeking, setPeeking] = useState(false);
+  const collapsed = !pinned && !peeking;
+
+  const collapse = () => {
+    setPeeking(false);
+    setSidebarCollapsed(true);
+  };
 
   return (
     <aside
-      className="fixed inset-y-0 left-0 z-30 hidden flex-col border-r border-line bg-sidebar transition-[width] duration-200 ease-calm md:flex"
+      className={cn(
+        'fixed inset-y-0 left-0 z-30 hidden flex-col border-r border-line bg-sidebar transition-[width,box-shadow] duration-200 ease-calm md:flex',
+        peeking && !pinned && 'z-40 shadow-lift',
+      )}
       style={{ width: collapsed ? 76 : 256 }}
+      onMouseEnter={() => {
+        if (!pinned) setPeeking(true);
+      }}
+      onMouseLeave={() => setPeeking(false)}
+      onFocus={() => {
+        if (!pinned) setPeeking(true);
+      }}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setPeeking(false);
+      }}
       aria-label="Primary"
     >
       <div
         className={cn(
           'flex h-[68px] shrink-0 items-center border-b border-line',
-          collapsed ? 'justify-center px-2' : 'justify-between px-4',
+          collapsed ? 'justify-center px-2' : 'justify-between px-3',
         )}
       >
         {collapsed ? (
@@ -259,9 +281,16 @@ function Sidebar() {
             <Link to="/" className="rounded p-0.5" aria-label="NOEMA home">
               <BrandLockup />
             </Link>
-            <IconButton label="Collapse sidebar" onClick={toggleSidebar}>
-              <PanelLeftClose size={16} />
-            </IconButton>
+            <div className="flex items-center gap-0.5">
+              {!pinned && (
+                <IconButton label="Keep sidebar open" onClick={() => setSidebarCollapsed(false)}>
+                  <Pin size={15} />
+                </IconButton>
+              )}
+              <IconButton label="Collapse sidebar" onClick={collapse}>
+                <PanelLeftClose size={16} />
+              </IconButton>
+            </div>
           </>
         )}
       </div>
@@ -274,18 +303,15 @@ function Sidebar() {
           collapsed ? 'justify-center px-2' : 'justify-between px-4',
         )}
       >
-        {!collapsed && (
+        {collapsed ? (
+          <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] text-muted">
+            <ListChecks size={11} aria-hidden="true" />
+          </span>
+        ) : (
           <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] text-muted">
             <ListChecks size={11} aria-hidden="true" /> Local · IndexedDB
           </span>
         )}
-        <IconButton
-          label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-          onClick={toggleSidebar}
-          className={collapsed ? undefined : 'hidden'}
-        >
-          <PanelLeftOpen size={16} />
-        </IconButton>
       </div>
     </aside>
   );
