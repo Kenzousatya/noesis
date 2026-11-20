@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: 16 20 17;
+  --sidebar: 12 16 14;
+  --surface: 20 26 22;
+  --panel: 26 33 29;
+  --panel2: 32 41 35;
+  --text: 232 233 225;
+  --text2: 160 170 162;
+  --muted: 113 124 116;
+  --accent: 139 191 168;
+  --accent2: 196 173 132;
+  --border: 41 52 45;
+  --active: 36 51 43;
+  --danger: 213 124 119;
+  --success: 139 191 168;
+  --on-accent: 12 16 14;
+  --glow-a: 139 191 168;
+  --glow-b: 196 173 132;
+  --glow-strength: 0.07;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: 241 240 234;
+  --sidebar: 232 231 224;
+  --surface: 245 244 239;
+  --panel: 255 255 255;
+  --panel2: 250 249 245;
+  --text: 32 40 33;
+  --text2: 105 115 107;
+  --muted: 138 147 139;
+  --accent: 82 127 105;
+  --accent2: 164 138 99;
+  --border: 224 225 217;
+  --active: 220 231 224;
+  --danger: 180 85 79;
+  --success: 62 115 89;
+  --on-accent: 255 255 255;
+  --glow-a: 82 127 105;
+  --glow-b: 164 138 99;
+  --glow-strength: 0.09;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    margin: 0;
+    min-height: 100vh;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.3);
+    color: rgb(var(--text));
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--border));
+    border-radius: 8px;
+    border: 3px solid rgb(var(--bg));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--muted) / 0.7);
+  }
+}
+
+@layer components {
+  .field {
+    @apply w-full rounded-input border border-line bg-panel2 px-3 py-2 text-sm text-ink transition-colors placeholder:text-muted/80 hover:border-muted/40 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-muted;
+  }
+
+  .panel {
+    @apply rounded-card border border-line bg-panel;
+  }
+
+  .hairline {
+    @apply border-t border-line;
+  }
+
+  .editorial {
+    @apply font-serif font-normal tracking-[-0.01em];
+  }
+
+  .prose-quiet p {
+    @apply text-sm leading-relaxed text-ink2;
+  }
+}
+
+/* ——— Ambient atmosphere ——— */
+.atmosphere {
+  position: fixed;
+  inset: -30%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.atmosphere::before,
+.atmosphere::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+.atmosphere::before {
+  background: radial-gradient(
+    circle at 32% 38%,
+    rgb(var(--glow-a) / var(--glow-strength)) 0%,
+    transparent 55%
+  );
+  animation: atmosphere-drift-a 22s ease-in-out infinite alternate;
+}
+
+.atmosphere::after {
+  background: radial-gradient(
+    circle at 68% 62%,
+    rgb(var(--glow-b) / calc(var(--glow-strength) * 0.8)) 0%,
+    transparent 52%
+  );
+  animation: atmosphere-drift-b 19s ease-in-out infinite alternate;
+}
+
+@keyframes atmosphere-drift-a {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(3%, 2%, 0) scale(1.08);
+  }
+}
+
+@keyframes atmosphere-drift-b {
+  from {
+    transform: translate3d(2%, 1%, 0) scale(1.04);
+  }
+  to {
+    transform: translate3d(-2%, -3%, 0) scale(1);
+  }
+}
+
+/* ——— PDF text layer ——— */
+.pdf-page .textLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 1;
+  line-height: 1;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  caret-color: rgb(var(--accent));
+}
+
+.pdf-page .textLayer span,
+.pdf-page .textLayer br {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+
+.pdf-page .textLayer ::selection {
+  background: rgb(var(--accent) / 0.35);
+}
+
+.pdf-page .textLayer .endOfContent {
+  display: block;
+  position: absolute;
+  inset: 100% 0 0;
+  z-index: -1;
+  cursor: default;
+  user-select: none;
+}
+
+.pdf-search-hit {
+  background: rgb(var(--accent2) / 0.55);
+  border-radius: 2px;
+}
+
+/* ——— Utilities ——— */
+.thin-scroll {
+  scrollbar-width: thin;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere::before,
+  .atmosphere::after {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
